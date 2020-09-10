@@ -8,11 +8,11 @@
    git clone !@#$%^&*
    ```
 
-2. **Packing Configuration**
+2. **Configuration**
 
-   Configure setting in index.js
+   Configure setting in your own .env file
 
-3. **Run Auto Pack**
+3. **Run It**
 
    Start it up
 
