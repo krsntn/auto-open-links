@@ -18,7 +18,7 @@ async function loadSites(browser, clientURLs) {
       }
 
       try {
-        await newPage.waitFor('img', { waitUntil: 'load', timeout: 60000 });
+        await newPage.waitFor('img', { waitUntil: 'load', timeout: 120000 });
       } catch (err) {
         console.log(
           `${++loadedLinks}/${totalLinks} Error: ${url}`,

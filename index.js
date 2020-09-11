@@ -17,10 +17,15 @@ const { loadSites } = require('./scripts/loadSites');
 
     await autoLogin(page, clientListURL, username, password);
     const clientURLs = await getClientURL(page);
-    console.log('clientURLs', clientURLs);
+    console.log('------ Client URLs ------');
+    clientURLs.map((link) => console.log(link));
+    console.log(`Total: ${clientURLs.length} links\n`);
 
+    console.log('------ Start Loading Sites ------');
     const { failedLinks } = await loadSites(browser, clientURLs);
-    console.log('failedLinks', failedLinks);
+    console.log();
+    console.log('------ Failed Links ------');
+    failedLinks.map((link) => console.log(link));
     console.log('Finished');
     await browser.close();
   } catch (e) {
